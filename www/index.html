@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>The Tour Eiffel</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ernest Shackleton</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-
-  
-
-
   <body>
-    <div id='page'>
-      <div id='header'>
-        <h1>La Tour Eiffel</h1>
-      </div>
-      <h2>Paris, France</h2>
-      <h3>Constructed 1887-1889</h3>
-
-    <div id="left-column" style="float:left; text-align:center; width:400px;">
-      <img src="tour_eiffel.jpg", width="400" height="320" alt="Construction in 6969">
-          <p>
-      <a href="https://www.youtube.com/watch?v=r65KAj2sB0U">See the construction of the Eiffel Tower</a>
+    <ons-page>
+      <div style="text-align: center; margin-top: 200px">
+      <p>
+      <ons-input id="username" placeholder="Username" modifier="underbar">
+      </ons-input>
       </p>
+      <p>
+      <ons-input
+      id="password"
+      placeholder="Password"
+      type="password"
+      modifier="underbar">
+    </ons-input>
+    </p>
+    <p>
+    <ons-button>Sign in</ons-button>
+    </p>
     </div>
+    </ons-page>
+  <script src='script.js'></script>
+<div id="wrapper">
 
-    <div id="right-column"> 
-      <h2>The construction schedule</h2>
-        <div class='list'>
-          <ol>
-            <li>The first floor was completed on the 1st April 1888</li>
-            <li>The second floor was completed on the 14th August 1888</li>
-            <li>The top section was completed on the 31st March 1889</li>
-          </ol>
-        </div>
+  <div id = "header">
+    <img src ="Images/shackletonicon.jpg" alt="A picture of Ernest Shakleton">
+    <h2>Ernest Shackleton (1874 - 1922)</h2>
+  </div>
+  <div id = "nav">
+    <ul>
+    <li>Shackleton's Life</li>
+    <li>Dulwich College</li>
+    <li>Endurance Expedition</li>
+    <li>James Caird</li>
+    </ul>
+  </div>
 
-        <h2>Facts and figures</h2>
-        <div class='list'>
-          <ul>
-            <li>The tower has 1665 steps</li>
-            <li>2.5 million rivets were used</li>
-            <li>7,300 tonnes of iron</li>
-            <li>60 tonnes of paint</li>
-          </ul>
-        </div>
-    </div>
+  <div id='container'>
 
+    <h3>Shackleton's Life</h3>
 
+    <p class="snippet"><a href = "https://en.wikipedia.org/wiki/Ernest_Shackleton" target="_blank">Sir Ernest Shackleton</a> was an Anglo-Irish Antarctic explorer and is famous, principally, for leading the Imperial Trans-Antartic (Endurance) Expedition of 1914-16.</p>
 
-   <div style="clear:both;"></div>
-   </div>
+    <p class="snippet">He was one of the principal figures of the period known as the Heroic Age of Antartic Exploration. Educated at Dulwich College and having ignored his father's wishes that he become a doctor he joined the merchant navy. Of many quotes one of his most famous is, <span class="myquote">"Difficulties are just things to overcome, after all."</span></p> 
+
+    <p class="snippet">During his life he made three trips to the Antarctic. As well as climbing Mount Erebus he made many important scientific discoveries. On his fourth expedition to circumnavigate the Antartic he died of a heart attack. He was buried on the Island of South Georgia.</p>
+
+  </div>
+  <div class="clearme"></div>
+  <div id="quiz">
+    <h3>Quiz</h3>
+    <p>How far(according toe Shackleton's wikipedia page) is it from Elephant Island to South Georgia in nautical miles<span class="myquote" id="ans"></span></p>
+    
+    <button onClick = "chk_ans()">Check answer</button>
+  </div>
+  <div id="footer">
+    <p>Thank you for visiting my page</p>
+  </div>
+</div>
   </body>
 </html>
